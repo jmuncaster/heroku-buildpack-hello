@@ -20,7 +20,10 @@ export_env_dir() {
 
 export_env_dir $3
 
-echo "SSH_KEY=${CONSERVATOR_DEPLOY_KEY}"
+set -o verbose
+echo ${CONSERVATOR_DEPLOY_KEY} > conservator-deploy.key
+ssh-add conservator-deploy-key
+git clone git@github.com:jmuncaster/ffmpeglib.git
 
 indent() {
   sed -u 's/^/       /'
