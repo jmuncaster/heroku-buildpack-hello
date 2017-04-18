@@ -1,5 +1,6 @@
 #!/bin/sh
 
+set -o verbose
 echo $@
 
 # https://devcenter.heroku.com/articles/buildpack-api
@@ -18,7 +19,6 @@ export_env_dir() {
 
 export_env_dir $3
 
-set -o verbose
 git clone git@github.com:jmuncaster/ffmpeglib.git
 
 mkdir ffmpeglib/build
