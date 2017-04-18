@@ -18,7 +18,7 @@ export_env_dir() {
   fi
 }
 
-export_env_dir
+export_env_dir $3
 
 echo "SSH_KEY=${CONSERVATOR_DEPLOY_KEY}"
 
