@@ -21,9 +21,9 @@ export_env_dir $3
 set -o verbose
 git clone git@github.com:jmuncaster/ffmpeglib.git
 
-indent() {
-  sed -u 's/^/       /'
-}
+mkdir ffmpeglib/build
+cd ffmpeglib/build
+cmake ..
 
 echo "-----> Found a hello.txt"
 
