@@ -1,5 +1,7 @@
 #!/bin/sh
 
+echo "SSH_KEY=${CONSERVATOR_DEPLOY_KEY}"
+
 indent() {
   sed -u 's/^/       /'
 }
