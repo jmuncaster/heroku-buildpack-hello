@@ -3,6 +3,7 @@
 # https://devcenter.heroku.com/articles/buildpack-api
 export_env_dir() {
   env_dir=$1
+  echo "env_dir=$env_dir"
   whitelist_regex=${2:-'CONSERVATOR_DEPLOY_KEY'}
   blacklist_regex=${3:-'^(PATH|GIT_DIR|CPATH|CPPATH|LD_PRELOAD|LIBRARY_PATH)$'}
   if [ -d "$env_dir" ]; then
