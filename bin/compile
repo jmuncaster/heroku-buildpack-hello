@@ -1,5 +1,7 @@
 #!/bin/sh
 
+echo $@
+
 # https://devcenter.heroku.com/articles/buildpack-api
 export_env_dir() {
   env_dir=$1
