@@ -22,6 +22,7 @@ export_env_dir $3
 
 set -o verbose
 echo ${CONSERVATOR_DEPLOY_KEY} > conservator-deploy.key
+ssh-agent
 ssh-add conservator-deploy-key
 git clone git@github.com:jmuncaster/ffmpeglib.git
 
